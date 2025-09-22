@@ -1,0 +1,20 @@
+<!-- Navbar principal -->
+<mat-toolbar color="primary" class="app-toolbar">
+  <mat-icon class="toolbar-icon">agriculture</mat-icon>
+  <span class="app-title">{{ title }}</span>
+  <span class="spacer"></span>
+  <button mat-button routerLink="/pedidos" class="nav-button">
+    <mat-icon>list</mat-icon>
+    Pedidos
+  </button>
+</mat-toolbar>
+
+<!-- Contenido principal -->
+<main class="main-content">
+  <router-outlet></router-outlet>
+</main>
+
+<!-- Footer -->
+<footer class="app-footer">
+  <p>&copy; 2024 AFECOR - Sistema de gestión de pedidos agroquímicos</p>
+</footer>
