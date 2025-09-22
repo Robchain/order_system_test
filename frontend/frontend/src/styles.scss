@@ -1,29 +1,4 @@
-/* src/styles.scss - Versión para Angular 20 */
-
-// Importar tema de Angular Material (nueva sintaxis)
-@use '@angular/material' as mat;
-
-// Incluir los estilos core de Material
-@include mat.core();
-
-// Definir paleta de colores
-$primary-palette: mat.define-palette(mat.$blue-palette, 600);
-$accent-palette: mat.define-palette(mat.$green-palette, 500);
-$warn-palette: mat.define-palette(mat.$red-palette, 500);
-
-// Crear tema
-$theme: mat.define-light-theme((
-  color: (
-    primary: $primary-palette,
-    accent: $accent-palette,
-    warn: $warn-palette,
-  ),
-  typography: mat.define-typography-config(),
-  density: 0,
-));
-
-// Aplicar tema
-@include mat.all-component-themes($theme);
+/* src/styles.scss - Versión simplificada */
 
 // Reset básico
 * {
@@ -40,7 +15,7 @@ html, body {
   line-height: 1.6;
 }
 
-// Clases utilitarias
+// Clases utilitarias básicas
 .text-center { text-align: center; }
 .text-left { text-align: left; }
 .text-right { text-align: right; }
@@ -59,50 +34,6 @@ html, body {
 .p-2 { padding: 16px; }
 .p-3 { padding: 24px; }
 
-// Clases para indicadores de rentabilidad
-.rentabilidad-verde {
-  background-color: #d4edda !important;
-  color: #155724 !important;
-  border: 1px solid #c3e6cb !important;
-}
-
-.rentabilidad-amarillo {
-  background-color: #fff3cd !important;
-  color: #856404 !important;
-  border: 1px solid #ffeaa7 !important;
-}
-
-.rentabilidad-rojo {
-  background-color: #f8d7da !important;
-  color: #721c24 !important;
-  border: 1px solid #f5c6cb !important;
-}
-
-// Estilos para snackbars personalizados
-.success-snackbar {
-  background-color: #4caf50 !important;
-  color: white !important;
-}
-
-.error-snackbar {
-  background-color: #f44336 !important;
-  color: white !important;
-}
-
-.warning-snackbar {
-  background-color: #ff9800 !important;
-  color: white !important;
-}
-
-// Mejoras para Angular Material
-.mat-mdc-form-field {
-  width: 100%;
-}
-
-.mat-mdc-card {
-  margin-bottom: 20px;
-}
-
 // Responsive utilities
 @media (max-width: 768px) {
   .hide-mobile { display: none !important; }
@@ -120,22 +51,4 @@ html, body {
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
-}
-
-// Scrollbar personalizado
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #c1c1c1;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #a8a8a8;
 }
